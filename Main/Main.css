@@ -1,0 +1,166 @@
+#Travelaux {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 10px 23px 35px;
+}
+
+.back-image {
+  background-image: url("Images/alain-yAu52w1lo64-unsplash.jpg");
+  background-color: #cccccc;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+}
+
+.center {
+    display: block;
+    padding-top: 4cm;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}
+
+.w3-animate-bottom {
+    position:relative;
+    animation:animatelogo ease-in-out 1.5s;
+}
+
+.sitename {
+    text-align: center;
+    color: beige;
+    font-weight: bold;
+    animation: animatetext ease-in-out 1.5s;
+}
+
+.intro {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    height: 8.5cm;
+}
+
+.intro-text {
+    display: block;
+    color:#eef4f7;
+    text-align: justify;
+    padding: 33px 40px 2cm 12cm;
+}
+
+.intro-img {
+    display: block;
+    position: relative;
+    padding: 33px 40px 2cm 40px;
+}
+
+.footer {
+    background-color: #eef4f7;
+    color: #242527;
+    text-align: center;
+    height: 7cm;
+    margin-top: -10px;
+}
+
+body {
+    margin: 0;
+    overflow: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef4f7;  
+    font-size: large;
+}
+
+ul.navbar {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #242527;
+    text-align: center;
+    padding: 23px 30px 23px 0px;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+li a:hover{
+    color: #35845d;
+    transition: 0.4s;
+}
+  
+.footer ul {
+    padding-top: 3px;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    padding-right: 10cm;
+}
+  
+.footer li {
+    padding: 10px
+}
+  
+.footer ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+  
+.footer ul a:hover {
+    opacity:1;
+    color: #35845d;
+}
+  
+.footer .social {
+    text-align:center;
+    padding-top: 35px;
+    padding-bottom: 0px;
+}
+  
+.footer .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+  
+.footer .social > a:hover {
+    opacity:0.9;
+    color: #35845d;
+}
+  
+.footer .copyright {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 17px;
+    color:rgb(0, 0, 0);
+    opacity: 0.5;
+}
+  
+/* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+@keyframes animatelogo {
+    0% {bottom:-150px;opacity:0} 
+    100% {bottom:0;opacity:1}
+}
+
+@keyframes animatetext {
+    0% {padding-top: 120px;opacity:0} 
+    100% {padding-top: 0px;opacity:1}
+}
