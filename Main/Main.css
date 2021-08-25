@@ -25,14 +25,14 @@
 
 .w3-animate-bottom {
     position:relative;
-    animation:animatelogo ease-in-out 1.5s;
+    animation:animatelogo ease-in-out 1.7s;
 }
 
 .sitename {
     text-align: center;
     color: beige;
     font-weight: bold;
-    animation: animatetext ease-in-out 1.5s;
+    animation: animatetext ease-in-out 1.7s;
 }
 
 .intro {
