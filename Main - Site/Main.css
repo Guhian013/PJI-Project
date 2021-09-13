@@ -24,20 +24,21 @@
 }
 
 .w3-animate-bottom {
-    position:relative;
-    animation:animatelogo ease-in-out 1.7s;
+    position: relative;
+    animation: animatelogo ease-in-out 1.7s;
 }
 
 .sitename {
     text-align: center;
     color: beige;
-    font-weight: bold;
+    font-family: 'Arvo', serif;
     animation: animatetext ease-in-out 1.7s;
 }
 
 .intro {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
+    
     height: 8.5cm;
 }
 
@@ -70,6 +71,7 @@ body {
     background-color: #eef4f7;  
     font-size: large;
 }
+
 
 ul.navbar {
     position: relative;
@@ -135,7 +137,7 @@ li a:hover{
     line-height:40px;
     display:inline-block;
     text-align:center;
-    border-radius:50%;
+    border-radius: 20%;
     border:1px solid #ccc;
     margin:0 8px;
     color:inherit;
