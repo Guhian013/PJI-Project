@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="shortcut icon" href="Favicons/Graphicloads-Transport-Airplane-2.ico" type="image/x-icon">
+    <script defer src="ScriptQuiz.js"></script>
     <link rel="stylesheet" href="Quiz.css">
     <title>Quiz</title>
 </head>
@@ -20,14 +24,31 @@
         <li><a href="About.html">Sobre Nós</a></li>
         <li><a href="Quiz.html">Quiz</a></li>
         <li><a href="Main.html">Home</a></li>
-        <li style="float:left"><a id="Travelaux" href="Main.html">TravelAux</a></li>
+        <li style="float:left"><a class="Travelaux" href="Main.html">TravelAux</a></li>
     </ul>
+    <hr>
+    <h1 class="sub-title">Quiz</h1>
+    <hr>
 
+    <div class="container">
+        <div id="option-container" class="hide">
+            <img src="Images/4-estacoes-do-ano-no-brasil.jpg" id="question-title">
+            <div id="question">Question</div>
+            <div id="option-btns" class="btn-grid">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Começar Quiz</button>
+            <button id="previous-btn" class="previous-btn btn hide">Anterior</button>
+            <button id="next-btn" class="next-btn btn hide">Próximo</button>
+            <button id="end-btn" class="end-btn btn hide">Finalizar</button>
+        </div>
+    </div>
 
-
-
-
-    
     <div class="footer">
         <div class="social">
             <a href="#"><i class="icon ion-social-instagram"></i></a>
@@ -36,9 +57,9 @@
             <a href="#"><i class="icon ion-social-facebook"></i></a>
         </div>
         <ul class="list-inline">       
-            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Política de Privacidade</a></li>
+            <li class="list-inline-item"><a href="#">Termos</a></li>
+            <li class="list-inline-item"><a href="#">Sobre</a></li>
             <li class="list-inline-item"><a href="#">Home</a></li>
         </ul>
         <p class="copyright">TravelAux © 2021</p>
