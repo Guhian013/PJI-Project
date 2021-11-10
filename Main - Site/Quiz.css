@@ -115,6 +115,21 @@
     cursor: pointer;
 }
 
+.extend-btn {
+    float: right;
+    cursor: pointer;
+    margin-right: -2.2cm;
+    margin-top: -2.2cm;
+    outline: none;
+    border-color: rgb(186, 226, 226);
+    border-radius: 30cm;
+    background-color:rgb(199, 240, 240);
+}
+
+.extend-btn:active {
+    background-color: rgb(186, 226, 226);
+}
+
 .btn:hover {
     border-color: black;
     transition: border 0.37s ease-in-out;
@@ -131,6 +146,10 @@
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+.start-init {
+    margin-left: 8.7cm;
 }
 
 .controls {

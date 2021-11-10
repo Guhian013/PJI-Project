@@ -24,14 +24,15 @@ total = 0
 let Questions, currentQuestionIndex
 
 const placis = [
-    {place_1, clima: 'Frio'},
-    {place_2, clima: 'Quente'},
-    {place_3, clima: 'Chuvoso'},
-    {place_4, clima: 'Árido'},
+    {place_1, clima: 1, transporte: 8},
+    {place_2, clima: 2, transporte: 5},
+    {place_3, clima: 3, transporte: 6},
+    {place_4, clima: 3, transporte: 7},
 ]
 
 startButton.addEventListener('click', () => {
     startQuiz()
+    pageScroll()
     bool = true
 })
 nextButton.addEventListener('click', () => {
@@ -43,6 +44,10 @@ nextButton.addEventListener('click', () => {
 
 function resetTotal() {
     total = 0
+}
+
+function pageScroll() {
+    container.scrollIntoView({behavior: "smooth", block: "center"})
 }
 
 function startQuiz() {
@@ -94,6 +99,7 @@ function selectOption(e) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = "Recomeçar"
+        startButton.classList.remove('start-init')
         startButton.addEventListener('click', resetTotal)
         startButton.classList.remove('hide')
         endButton.classList.remove('hide')
@@ -124,28 +130,28 @@ const options = [
     {
         question: "Qual tipo de clima você prefere?",
         options: [
-            {text: 'Quente', value: 'Quente'},
-            {text: 'Frio', value: 'Frio'},
-            {text: 'Chuvoso', value: 'Chuvoso'},
-            {text: 'Árido', value: 'Árido'}
+            {text: 'Quente', value: 1},
+            {text: 'Frio', value: 2},
+            {text: 'Chuvoso', value: 3},
+            {text: 'Árido', value: 4}
         ]
     },
     {
         question: "Qual região do Brasil você prefere?",
         options: [
-            {text: 'Norte', value: 'Norte'},
-            {text: 'Sul', value: 'Sul'},
-            {text: 'Leste', value: 'Leste'},
-            {text: 'Oeste', value: 'Oeste'}
+            {text: 'Norte', value: 5},
+            {text: 'Sul', value: 6},
+            {text: 'Leste', value: 7},
+            {text: 'Oeste', value: 8}
         ]
     },
     {
         question: "Que tipo de transporte você prefere?",
         options: [
-            {text: 'Ônibus', value: 'Ônibus'},
-            {text: 'Carro', value: 'Carro'},
-            {text: 'Avião', value: 'Avião'},
-            {text: 'Barco', value: 'Barco'}
+            {text: 'Ônibus', value: 9},
+            {text: 'Carro', value: 10},
+            {text: 'Avião', value: 11},
+            {text: 'Barco', value: 12}
         ]
     }
 ]
