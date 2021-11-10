@@ -6,16 +6,39 @@ const questionContainerElement = document.getElementById('option-container')
 const questionElement = document.getElementById('question')
 const optionsButtonsElement = document.getElementById('option-btns')
 const image = document.getElementById('question-title')
+
+const places = document.getElementById('places')
+const place_1 = document.getElementById('place-1')
+const place_2 = document.getElementById('place-2')
+const place_3 = document.getElementById('place-3')
+const place_4 = document.getElementById('place-4')
+const container = document.getElementById('container')
+
+container.classList.remove('hide')
+
 var total = parseInt(total)
+var clima;
+var bool = true
 total = 0
 
 let Questions, currentQuestionIndex
 
-startButton.addEventListener('click', startQuiz)
+const placis = [
+    {place_1, clima: 'Frio'},
+    {place_2, clima: 'Quente'},
+    {place_3, clima: 'Chuvoso'},
+    {place_4, clima: 'Árido'},
+]
+
+startButton.addEventListener('click', () => {
+    startQuiz()
+    bool = true
+})
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextOption()
     setNextPicture()
+    bool = true
 })
 
 function resetTotal() {
@@ -58,16 +81,15 @@ function resetState() {
     }
 }
 
-function responsiveButton() {
-    
-}
-
 function selectOption(e) {
-    const selectedButton = e.target
-    selectedButton.classList.remove('btn')
-    selectedButton.classList.add('selected-button')
-    const value = selectedButton.dataset.value
-    setTotalValue(value)
+    if (bool) {
+        const selectedButton = e.target
+        selectedButton.classList.remove('btn')
+        selectedButton.classList.add('selected-button')
+        const value = selectedButton.dataset.value
+        setTotalValue(value)
+        bool = false
+    }
     if (options.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
@@ -75,14 +97,19 @@ function selectOption(e) {
         startButton.addEventListener('click', resetTotal)
         startButton.classList.remove('hide')
         endButton.classList.remove('hide')
+        endButton.addEventListener('click',() => {
+            container.classList.add('hide')
+            places.classList.remove('hide')
+            place_1.classList.remove('hide')
+            place_2.classList.remove('hide')
+            place_3.classList.remove('hide')
+        })
     }
 }
 
 function setTotalValue(value) {
-    value = parseInt(value)
-    total += value
+    value = value
     console.log("Value: " + value)
-    console.log("Total: " + total)
 }
 
 function setNextPicture() {
@@ -97,28 +124,28 @@ const options = [
     {
         question: "Qual tipo de clima você prefere?",
         options: [
-            {text: 'Quente', value: 1},
-            {text: 'Frio', value: 2},
-            {text: 'Chuvoso', value: 3},
-            {text: 'Árido', value: 4}
+            {text: 'Quente', value: 'Quente'},
+            {text: 'Frio', value: 'Frio'},
+            {text: 'Chuvoso', value: 'Chuvoso'},
+            {text: 'Árido', value: 'Árido'}
         ]
     },
     {
         question: "Qual região do Brasil você prefere?",
         options: [
-            {text: 'Norte', value: 1},
-            {text: 'Sul', value: 2},
-            {text: 'Leste', value: 3},
-            {text: 'Oeste', value: 4}
+            {text: 'Norte', value: 'Norte'},
+            {text: 'Sul', value: 'Sul'},
+            {text: 'Leste', value: 'Leste'},
+            {text: 'Oeste', value: 'Oeste'}
         ]
     },
     {
         question: "Que tipo de transporte você prefere?",
         options: [
-            {text: 'Ônibus', value: 1},
-            {text: 'Carro', value: 2},
-            {text: 'Avião', value: 3},
-            {text: 'Barco', value: 4}
+            {text: 'Ônibus', value: 'Ônibus'},
+            {text: 'Carro', value: 'Carro'},
+            {text: 'Avião', value: 'Avião'},
+            {text: 'Barco', value: 'Barco'}
         ]
     }
 ]

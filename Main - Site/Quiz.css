@@ -54,12 +54,38 @@
     background-color: rgb(204, 204, 204);
 }
 
+.place {
+    display: block;
+    background-color: rgb(199, 240, 240);
+    border-radius: 3px;
+    padding: 2.5cm;
+    margin: 3px 0 3px 0;
+    box-shadow: 0 0 2px 0.1px;
+}
+
+.place-txt {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: -2.2cm 0 0 -1.9cm
+}
+
 .container {
     display: grid;
     align-items: center;
     margin: auto;
     margin-top: 1cm;
-    background-color: white;
+    background-color: #eef4f7;
+    border-radius: 5px;
+    padding: 10px;
+    width: 63%;
+    box-shadow: 0 0 3px 0.1px;
+}
+
+.places {
+    display: grid;
+    align-items: center;
+    margin: auto;
+    margin-top: 1cm;
+    background-color: #eef4f7;
     border-radius: 5px;
     padding: 10px;
     width: 63%;
@@ -67,7 +93,7 @@
 }
 
 .selected-button {
-    background-color: rgb(157, 80, 230);
+    background-color: rgb(202, 187, 216);
     color: white;
     padding: 5px 10px;
     border: 1px #ccc solid;
@@ -86,6 +112,7 @@
     padding: 5px 10px;
     color: rgb(112, 112, 112);
     outline: none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -103,6 +130,7 @@
 .start-btn, .previous-btn, .next-btn, .end-btn {
     font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .controls {
@@ -222,5 +250,4 @@ li a:hover{
     0% {width: 0%;}
     100% {width: 65%;}
 }
-
 
