@@ -34,21 +34,22 @@
 }
 
 #question-title {
-    display: flex;
-    justify-content: center;
-    background-position: center;
-    height: 10cm;
-    margin-bottom: -11cm;
-    margin-left: 1.72cm;
+    display: block;
+    align-items: center;
+    align-content: center;
+    height: 11cm;
+    margin: auto;
     background-repeat: no-repeat;
     position: relative;
+    border-radius: 7px;
 }
 
 #question {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    margin-top: 11.3cm;
+    margin: auto;
+    margin-top: 10px;
     padding: 0 6cm;
     border-radius: 20px;
     background-color: rgb(204, 204, 204);
@@ -64,7 +65,7 @@
 }
 
 .place-txt {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Jost', sans-serif;
     margin: -2.2cm 0 0 -1.9cm
 }
 

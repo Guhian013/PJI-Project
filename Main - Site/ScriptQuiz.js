@@ -11,23 +11,27 @@ const places = document.getElementById('places')
 const place_1 = document.getElementById('place-1')
 const place_2 = document.getElementById('place-2')
 const place_3 = document.getElementById('place-3')
-const place_4 = document.getElementById('place-4')
 const container = document.getElementById('container')
 
 container.classList.remove('hide')
 
+const place1 = document.getElementsByClassName('place')
+const place2 = document.getElementsByClassName('place')
+const place3 = document.getElementsByClassName('place')
+const place4 = document.getElementsByClassName('place')
+
 var total = parseInt(total)
-var clima;
+var clima
 var bool = true
 total = 0
 
 let Questions, currentQuestionIndex
 
 const placis = [
-    {place_1, clima: 1, transporte: 8},
-    {place_2, clima: 2, transporte: 5},
-    {place_3, clima: 3, transporte: 6},
-    {place_4, clima: 3, transporte: 7},
+    {place1, clima: 1, regiao: 8, transporte: 11},
+    {place2, clima: 2, regiao: 5, transporte: 12},
+    {place3, clima: 3, regiao: 6, transporte: 10},
+    {place4, clima: 3, regiao: 7, transporte: 9}
 ]
 
 startButton.addEventListener('click', () => {
@@ -51,7 +55,7 @@ function pageScroll() {
 }
 
 function startQuiz() {
-    image.src="Images/4-estacoes-do-ano-no-brasil.jpg"
+    image.src="https://www.sketchappsources.com/resources/source-image/climate-icons-hosseinian.png"
     endButton.classList.add('hide')
     startButton.classList.add('hide')
     Questions = options
@@ -91,8 +95,17 @@ function selectOption(e) {
         const selectedButton = e.target
         selectedButton.classList.remove('btn')
         selectedButton.classList.add('selected-button')
-        const value = selectedButton.dataset.value
-        setTotalValue(value)
+        pageScroll()
+        if (selectedButton.dataset.value >= 1 && selectedButton.dataset.value <= 4) {
+            var climaz = selectedButton.dataset.value
+        } else if (selectedButton.dataset.value >= 5 && selectedButton.dataset.value <= 8) {
+            var regiaoz = selectedButton.dataset.value
+        } else if (selectedButton.dataset.value >= 9 && selectedButton.dataset.value <= 12) {
+            var transportez = selectedButton.dataset.value
+        }
+        setClima(climaz)
+        setRegiao(regiaoz)
+        setTransporte(transportez)
         bool = false
     }
     if (options.length > currentQuestionIndex + 1) {
@@ -113,16 +126,26 @@ function selectOption(e) {
     }
 }
 
-function setTotalValue(value) {
-    value = value
-    console.log("Value: " + value)
+function setClima(value) {
+    var fclima = value
+    console.log("Clima: " + fclima)
+}
+
+function setRegiao(value) {
+    var fregiao = value
+    console.log("Região: " + fregiao)
+}
+
+function setTransporte(value) {
+    var ftransporte = value
+    console.log("Transporte: " + ftransporte)
 }
 
 function setNextPicture() {
     if(currentQuestionIndex == 1) {
-        image.src="Images/rodasdosventosregioesdobrasil2.jpg"
+        image.src="https://o.quizlet.com/R83wCCnwxgQylxWG3-vYrg_b.png"
     } else if(currentQuestionIndex == 2) {
-        image.src="Images/1386284558000-plane-turning.jpg"
+        image.src="https://st8.cannypic.com/thumbs/40/408827_632_canny_pic.jpg"
     }
 }
 
