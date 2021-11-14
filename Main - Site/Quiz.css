@@ -45,9 +45,8 @@
 }
 
 #question {
-    display: block;
+    display: flex;
     justify-content: center;
-    align-items: center;
     margin: auto;
     margin-top: 10px;
     padding: 0 6cm;
@@ -122,13 +121,17 @@
     margin-right: -2.2cm;
     margin-top: -2.2cm;
     outline: none;
-    border-color: rgb(186, 226, 226);
     border-radius: 30cm;
+    border: none;
     background-color:rgb(199, 240, 240);
 }
 
+.extend-btn:hover {
+    background-color: rgb(197, 219, 219);
+}
+
 .extend-btn:active {
-    background-color: rgb(186, 226, 226);
+    background-color: rgb(175, 194, 194);
 }
 
 .btn:hover {
@@ -150,7 +153,7 @@
 }
 
 .start-init {
-    margin-left: 8.7cm;
+    margin: auto;
 }
 
 .controls {
