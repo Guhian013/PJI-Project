@@ -7,6 +7,10 @@ const questionElement = document.getElementById('question')
 const optionsButtonsElement = document.getElementById('option-btns')
 const image = document.getElementById('question-title')
 
+const place1txt = document.getElementById('place1-txt')
+const place2txt = document.getElementById('place2-txt')
+const place3txt = document.getElementById('place3-txt')
+
 const places = document.getElementById('places')
 const place_1 = document.getElementById('place-1')
 const place_2 = document.getElementById('place-2')
@@ -22,6 +26,8 @@ const place4 = document.getElementsByClassName('place')
 
 var total = parseInt(total)
 var clima
+var fclima
+var pt
 var bool = true
 total = 0
 
@@ -97,15 +103,15 @@ function selectOption(e) {
         selectedButton.classList.add('selected-button')
         pageScroll()
         if (selectedButton.dataset.value >= 1 && selectedButton.dataset.value <= 4) {
-            var climaz = selectedButton.dataset.value
+            pt = selectedButton.dataset.value
+            setClima(pt)
         } else if (selectedButton.dataset.value >= 5 && selectedButton.dataset.value <= 8) {
-            var regiaoz = selectedButton.dataset.value
+            pt = selectedButton.dataset.value
+            setRegiao(pt)
         } else if (selectedButton.dataset.value >= 9 && selectedButton.dataset.value <= 12) {
-            var transportez = selectedButton.dataset.value
+            pt = selectedButton.dataset.value
+            setTransporte(pt)
         }
-        setClima(climaz)
-        setRegiao(regiaoz)
-        setTransporte(transportez)
         bool = false
     }
     if (options.length > currentQuestionIndex + 1) {
@@ -122,12 +128,15 @@ function selectOption(e) {
             place_1.classList.remove('hide')
             place_2.classList.remove('hide')
             place_3.classList.remove('hide')
+            place1txt.innerText = "Teste 1"
+            place2txt.innerText = "Teste 2"
+            place3txt.innerText = "Teste 3"
         })
     }
 }
 
 function setClima(value) {
-    var fclima = value
+    fclima = value
     console.log("Clima: " + fclima)
 }
 
