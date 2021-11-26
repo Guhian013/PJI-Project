@@ -97,8 +97,8 @@ li a {
 }
 
 li a:hover{
+	transition: 0.4s;
     color: #35845d;
-    transition: 0.4s;
 }
   
 .footer ul {
