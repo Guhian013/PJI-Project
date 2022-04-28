@@ -53,15 +53,6 @@
     font-family: 'Prata', serif;
 }
 
-.sub-text {
-    display: block;
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    padding-top: 15px; 
-    font-family: 'Poppins', sans-serif;
-}
-
 .texte {
     display: flex;
     text-align: center;

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="shortcut icon" href="../Favicons/Graphicloads-Transport-Airplane-2.ico" type="image/x-icon">
@@ -20,45 +21,154 @@
     <title>Quiz</title>
 </head>
 <body>
-    <ul class="navbar">       
-        <li><a href="../Html/Suporte.html">Suporte</a></li>
-        <li><a href="../Html/About.html">Sobre Nós</a></li>
-        <li><a href="../Html/Quiz.html">Quiz</a></li>
-        <li><a href="../index.html">Home</a></li>
-        <li style="float:left"><a class="Travelaux" href="../index.html">TravelAux</a></li>
-    </ul>
-    <hr>
-    <h1 class="sub-title">Quiz</h1>
-    <hr>
+    <div class="row">
+        <ul class="navbar col-12">       
+            <li><a href="../Html/Support.html">Suporte</a></li>
+            <li><a href="../Html/AboutUs.html">Sobre Nós</a></li>
+            <li><a href="../Html/Quiz.html">Quiz</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li style="float:left"><a class="Travelaux" href="../index.html">TravelAux</a></li>
+        </ul>
+    </div>
 
-    <p class="sub-text">Responda o Quiz para descobrir seu próximo destino!!</p>
+    <div class="row col-12"><hr></div>
+    <h1 class="row sub-title col-12">Quiz</h1>
+    <div class="row col-12"><hr></div>
 
-    <div id="places" class="places hide">
-        <div id="place-1" class="place hide">
-            <button class="extend-btn"><img src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Down-4-icon.png"></button>
-            <h3 id="place1-txt" class="place-txt">Espírito Santo</h3>
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7701014.136922567!2d-39.873300689731224!3d-19.53041333665115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb7069579646359%3A0x4e1bd5243c50f799!2sEsp%C3%ADrito%20Santo!5e0!3m2!1spt-BR!2sbr!4v1636367622677!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+    <p id="sub-texte" class="row sub-text col-12">Responda o Quiz para descobrir seu próximo destino!!</p>
+
+    <div id="places" class="places col-8 hide">
+        <div id="place-1" class="place hide" loading="lazy">
+            <button id="btn-extd1f" class="extend-btn hide"><img id="img-extd1f" src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Down-4-icon.png"></button>
+            <button id="btn-extd1v" class="extend-btn hide"><img id="img-extd1v" src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Up-4-icon.png"></button>
+            <h3 id="place1-txt" class="place-txt col-12">SO</h3>
+            <img id="img-state1" class="img-state hide" width="656" height="210" src="" alt="img-state1">
+            <p id="state-txt1" class="p-intro hide col-12" style="font-size: medium; margin-bottom: -1cm">t</p>
+            <h4 id="mp-txt1" class="mapi-txt hide col-12">Mapa do Estado</h4>
+            <iframe id="gg-map1" class="gg-map hide col-12" src=""  height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h4 id="fd-txt1" class="foodi-txt hide">Comidas Típicas</h4>
+            <ul id="list-food1" class="lst-food hide">
+                <li>
+                    <h5 id="food-text1-1" class="sub-foodi-txt"></h5>
+                    <img id="food-img1-1" src="../Images/modelo.jpg" alt="comida-tipica1" class="img-food">
+                    <p id="food-desc1-1" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text1-2" class="sub-foodi-txt"></h5>
+                    <img id="food-img1-2" src="../Images/modelo.jpg" alt="comida-tipica2" class="img-food">
+                    <p id="food-desc1-2" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text1-3" class="sub-foodi-txt"></h5>
+                    <img id="food-img1-3" src="../Images/modelo.jpg" alt="comida-tipica3" class="img-food">
+                    <p id="food-desc1-3" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text1-4" class="sub-foodi-txt"></h5>
+                    <img id="food-img1-4" src="../Images/modelo.jpg" alt="comida-tipica4" class="img-food">
+                    <p id="food-desc1-4" class="p-xx"></p>
+                </li>
+            </ul>
+
+            <h4 id="cl-txt1" class="clima-txt hide">Clima do Estado</h4>
+            <p id="cl-desc1" class="p-clima hide"></p>
+
+            <h4 id="vi-txt1" class="travel-txt hide">Viagens</h4>
+            <p id="vi-desc1" class="p-travel hide"></p>
         </div>
-        <div id="place-2" class="place hide">
-            <button class="extend-btn"><img src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Down-4-icon.png"></button>
-            <h3 id="place2-txt" class="place-txt">Goiás</h3>
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7701014.136922567!2d-39.873300689731224!3d-19.53041333665115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb7069579646359%3A0x4e1bd5243c50f799!2sEsp%C3%ADrito%20Santo!5e0!3m2!1spt-BR!2sbr!4v1636367622677!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+
+        <div id="place-2" class="place hide" loading="lazy">
+            <button id="btn-extd2f" class="extend-btn hide"><img id="img-extd2f" src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Down-4-icon.png"></button>
+            <button id="btn-extd2v" class="extend-btn hide"><img id="img-extd2v" src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Up-4-icon.png"></button>
+            <h3 id="place2-txt" class="place-txt">CO</h3>
+            <img id="img-state2" class="img-state hide" width="656" height="210" src="" alt="img-state2">
+            <p id="state-txt2" class="p-intro hide" style="font-size: medium; margin-bottom: -1cm">t</p>
+            <h4 id="mp-txt2" class="mapi-txt hide">Mapa do Estado</h4>
+            <iframe id="gg-map2" class="gg-map hide" src="" width="656" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h4 id="fd-txt2" class="foodi-txt hide">Comidas Típicas</h4>
+            <ul id="list-food2" class="lst-food hide">
+                <li>
+                    <h5 id="food-text2-1" class="sub-foodi-txt"></h5>
+                    <img id="food-img2-1" src="../Images/modelo.jpg" alt="comida-tipica1" class="img-food">
+                    <p id="food-desc2-1" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text2-2" class="sub-foodi-txt"></h5>
+                    <img id="food-img2-2" src="../Images/modelo.jpg" alt="comida-tipica2" class="img-food">
+                    <p id="food-desc2-2" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text2-3" class="sub-foodi-txt"></h5>
+                    <img id="food-img2-3" src="../Images/modelo.jpg" alt="comida-tipica3" class="img-food">
+                    <p id="food-desc2-3" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text2-4" class="sub-foodi-txt"></h5>
+                    <img id="food-img2-4" src="../Images/modelo.jpg" alt="comida-tipica4" class="img-food">
+                    <p id="food-desc2-4" class="p-xx"></p>
+                </li>
+            </ul>
+
+            <h4 id="cl-txt2" class="clima-txt hide">Clima do Estado</h4>
+            <p id="cl-desc2" class="p-clima hide"></p>
+
+            <h4 id="vi-txt2" class="travel-txt hide">Viagens</h4>
+            <p id="vi-desc2" class="p-travel hide"></p>
         </div>
-        <div id="place-3" class="place hide">
-            <button class="extend-btn"><img src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Down-4-icon.png"></button>
-            <h3 id="place3-txt" class="place-txt">Maranhão</h3>
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7701014.136922567!2d-39.873300689731224!3d-19.53041333665115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb7069579646359%3A0x4e1bd5243c50f799!2sEsp%C3%ADrito%20Santo!5e0!3m2!1spt-BR!2sbr!4v1636367622677!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+
+        <div id="place-3" class="place hide" loading="lazy">
+            <button id="btn-extd3f" class="extend-btn hide"><img id="img-extd3f" src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Down-4-icon.png"></button>
+            <button id="btn-extd3v" class="extend-btn hide"><img id="img-extd3v" src="https://icons.iconarchive.com/icons/icons8/ios7/24/Arrows-Up-4-icon.png"></button>
+            <h3 id="place3-txt" class="place-txt">RRO</h3>
+            <img id="img-state3" class="img-state hide" width="656" height="210" src="" alt="img-state3">
+            <p id="state-txt3" class="p-intro hide" style="font-size: medium; margin-bottom: -1cm">t</p>
+            <h4 id="mp-txt3" class="mapi-txt hide">Mapa do Estado</h4>
+            <iframe id="gg-map3" class="gg-map hide" src="" width="656" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h4 id="fd-txt3" class="foodi-txt hide">Comidas Típicas</h4>
+            <ul id="list-food3" class="lst-food hide">
+                <li>
+                    <h5 id="food-text3-1" class="sub-foodi-txt"></h5>
+                    <img id="food-img3-1" src="../Images/modelo.jpg" alt="comida-tipica1" class="img-food">
+                    <p id="food-desc3-1" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text3-2" class="sub-foodi-txt"></h5>
+                    <img id="food-img3-2" src="../Images/modelo.jpg" alt="comida-tipica2" class="img-food">
+                    <p id="food-desc3-2" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text3-3" class="sub-foodi-txt"></h5>
+                    <img id="food-img3-3" src="../Images/modelo.jpg" alt="comida-tipica3" class="img-food">
+                    <p id="food-desc3-3" class="p-xx"></p>
+                </li>
+                <li>
+                    <h5 id="food-text3-4" class="sub-foodi-txt"></h5>
+                    <img id="food-img3-4" src="../Images/modelo.jpg" alt="comida-tipica4" class="img-food">
+                    <p id="food-desc3-4" class="p-xx"></p>
+                </li>
+            </ul>
+
+            <h4 id="cl-txt3" class="clima-txt hide">Clima do Estado</h4>
+            <p id="cl-desc3" class="p-clima hide"></p>
+
+            <h4 id="vi-txt3" class="travel-txt hide">Viagens</h4>
+            <p id="vi-desc3" class="p-travel hide"></p>
         </div>
     </div>
-    <div id="container" class="container hide">
-        <div id="option-container" class="hide">
-            <img src="https://www.sketchappsources.com/resources/source-image/climate-icons-hosseinian.png" id="question-title">
+
+
+    <div id="container" class="container col-8 hide">
+        <div id="option-container" class="hide col-12">
+            <img src="https://o.quizlet.com/R83wCCnwxgQylxWG3-vYrg_b.png" id="question-title">
             <div id="question">Question</div>
             <div id="option-btns" class="btn-grid">
-                <button class="btn">Option 1</button>
-                <button class="btn">Option 2</button>
-                <button class="btn">Option 3</button>
-                <button class="btn">Option 4</button>
+                <button id="op-1" class="btn">Option 1</button>
+                <button id="op-2" class="btn">Option 2</button>
+                <button id="op-3" class="btn">Option 3</button>
+                <button id="op-4" class="btn">Option 4</button>
+                <button id="op-5" class="btn hide">Option 5</button>
             </div>
         </div>
         <div class="controls">
@@ -70,18 +180,24 @@
     </div>
 
     <div class="footer">
-        <div class="social">
-            <a href="#"><i class="icon ion-social-instagram"></i></a>
-            <a href="#"><i class="icon ion-social-twitter"></i></a>
-            <a href="#"><i class="icon ion-social-facebook"></i></a>
+        <div class="row">
+            <div class="social col-12">
+                <a href="https://www.instagram.com/auxtr.avel/"><i class="icon ion-social-instagram"></i></a>
+                <a href="https://twitter.com/AuxTravel"><i class="icon ion-social-twitter"></i></a>
+                <a href="https://www.facebook.com/Aux-Travel-104957358696889"><i class="icon ion-social-facebook"></i></a>
+            </div>
         </div>
-        <ul class="list-inline">       
-            <li class="list-inline-item"><a href="#">Política de Privacidade</a></li>
-            <li class="list-inline-item"><a href="#">Termos</a></li>
-            <li class="list-inline-item"><a href="#">Sobre</a></li>
-            <li class="list-inline-item"><a href="#">Home</a></li>
-        </ul>
-        <p class="copyright">TravelAux © 2021</p>
+
+        <div class="row">
+            <ul class="list-inline col-12">
+                <li class="list-inline-item"><a href="../index.html">Home</a></li> 
+                <li class="list-inline-item"><a href="../Html/About.html">Sobre</a></li> 
+                <li class="list-inline-item"><a href="../Html/Terms.html">Termos</a></li>     
+                <li class="list-inline-item"><a href="../Html/Privacy.html">Política de Privacidade</a></li>
+            </ul>
+        </div>
+
+        <div class="row"><p class="copyright col-12">TravelAux © 2021</p></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

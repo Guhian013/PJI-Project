@@ -31,7 +31,7 @@
 }
 
 .Travelaux {
-    font-size: 21px;
+    font-size: xx-large;
     font-weight: bold;
     text-align: center;
     padding: 16px;
@@ -62,16 +62,62 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.texte {
+.src-dir {
     display: flex;
-    text-align: center;
+    justify-content: center;
+    margin-bottom: 1cm;
+}
+
+.src-1 {
+    margin-top: 1cm;
+}
+
+.obj-text {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
     font-weight: bold;
-    padding-top: 15px; 
-    margin-bottom: 1cm;
-    font-family: 'Poppins', sans-serif;
+}
+
+.src-2 {
+    margin-top: 1cm;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: gray solid 2px;
+}
+
+label {
+    padding: 7px;
+    display: block;
+}
+
+input {
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border: gray solid 2px;
 }
 
 hr { 
@@ -117,10 +163,6 @@ li {
 li a:hover{
     color: #35845d;
     transition: 0.4s;
-}
-
-.footer {
-    margin-top: 1cm;
 }
   
 .footer ul {
@@ -182,5 +224,6 @@ li a:hover{
     color:rgb(0, 0, 0);
     opacity: 0.5;
 }
-  
-/* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+
+

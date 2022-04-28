@@ -1,25 +1,54 @@
-*, *::before, *::after {
+* {
     box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    padding: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .Travelaux {
     font-size: xx-large;
     font-weight: bold;
     text-align: center;
-    padding: 22px 10px 23px 35px;
+    padding: 16px;
 }
 
 .footer {
     background-color: #eef4f7;
     color: #242527;
     text-align: center;
-    height: 7cm;
-    margin-top: -10px;
 }
 
 .sub-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center; 
-    padding-top: 25px; 
+    padding-top: 10px; 
     padding-bottom: 21px;
     font-family: 'Prata', serif;
 }
@@ -31,6 +60,72 @@
     font-weight: bold;
     padding-top: 15px; 
     font-family: 'Poppins', sans-serif;
+}
+
+.lst-food {
+    margin-left: -40px;
+}
+
+.img-food {
+    display: block;
+    float: left;
+    padding: 2px;
+    width: 3.5cm;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    border-radius: 8px;
+    transition: box-shadow 0.6s ease-in-out;
+}
+
+.img-food:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.p-xx {
+    display: block;
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.p-intro {
+    display: block;
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: bold;
+    text-align: justify;
+    margin-top: -0.04cm;
+}
+
+.p-clima {
+    display: block;
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.p-travel {
+    display: block;
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: -3cm;
+    text-align: justify;
+}
+
+.lst-food li {
+    display: block;
+    text-decoration: none;
+    list-style: none; 
+    overflow: hidden;
+    width: 17cm;
+    float: left;
 }
 
 #question-title {
@@ -47,11 +142,20 @@
 #question {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
-    margin-top: 10px;
-    padding: 0 6cm;
     border-radius: 20px;
     background-color: rgb(204, 204, 204);
+}
+
+.gg-map {
+    border-radius: 9px;
+}
+
+.img-state {
+    border-radius: 9px;
+    margin-bottom: -1cm;
+    margin-top: 0.6cm;
 }
 
 .place {
@@ -59,13 +163,45 @@
     background-color: rgb(199, 240, 240);
     border-radius: 3px;
     padding: 2.5cm;
-    margin: 3px 0 3px 0;
+    margin: 3px 0 4px 0;
     box-shadow: 0 0 2px 0.1px;
 }
 
 .place-txt {
+    font-family: 'Amatic SC', cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin: -2.2cm 0 0 -1.9cm;
+}
+
+.foodi-txt {
     font-family: 'Jost', sans-serif;
-    margin: -2.2cm 0 0 -1.9cm
+    font-weight: bold;
+    margin: 30px 0 -20px -20px;
+}
+
+.mapi-txt {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    margin: 60px 0 10px -20px;
+}
+
+.clima-txt {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    margin: 18cm 0 0 -20px;
+}
+
+.travel-txt {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    margin: 40px 0 0 -20px;
+}
+
+.sub-foodi-txt {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 .container {
@@ -73,10 +209,10 @@
     align-items: center;
     margin: auto;
     margin-top: 1cm;
+    margin-bottom: 1cm;
     background-color: #eef4f7;
     border-radius: 5px;
     padding: 10px;
-    width: 63%;
     box-shadow: 0 0 3px 0.1px;
 }
 
@@ -88,7 +224,6 @@
     background-color: #eef4f7;
     border-radius: 5px;
     padding: 10px;
-    width: 63%;
     box-shadow: 0 0 4px 0.1px;
 }
 
@@ -172,15 +307,12 @@ body {
 }
 
 hr { 
-    display: block;
-    margin-top: 2px;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    margin: -10px 5cm 0 5cm;
     border-style: inset;
+    justify-content: center;
+    align-items: center;
     border-width: 1px;
-    width: 65%;
-    animation: linemation 2.5s ease;
 } 
 
 ul.navbar {
@@ -195,11 +327,11 @@ li {
     float: right;
 }
 
-li a {
+.navbar li a {
     display: block;
     color: #242527;
     text-align: center;
-    padding: 30px 30px 23px 0px;
+    padding: 16px;
     text-decoration: none;
     font-size: 21px;
     font-family: 'Comfortaa', cursive;
@@ -207,20 +339,29 @@ li a {
 }
 
 li a:hover{
+	transition: 0.4s;
     color: #35845d;
-    transition: 0.4s;
+}
+
+.footer {
+    margin-top: 1cm;
 }
   
 .footer ul {
-    padding-top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
     list-style: none;
     text-align: center;
     font-size: 18px;
-    padding-right: 8.5cm;
 }
   
 .footer li {
-    padding: 3px;
+    padding: 12px;
+    font-size: 21px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
 }
   
 .footer ul a {
@@ -235,22 +376,21 @@ li a:hover{
 }
   
 .footer .social {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 2cm;
+    padding-top: 2px;
+    padding-bottom: 0px;
 }
   
 .footer .social > a {
     font-size: 24px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
+    padding: 2px 12px;
     text-align: center;
     border-radius: 20%;
     border: 1px solid #ccc;
     margin: 0 8px;
-    color: inherit;
     opacity: 0.75;
 }
   
@@ -259,18 +399,11 @@ li a:hover{
     color: #35845d;
 }
   
-.copyright {
-    display: block;
-    margin-top: 3cm;
+.footer .copyright {
+    text-align: center;
     font-size: 17px;
+    margin-top: -1cm;
     color:rgb(0, 0, 0);
     opacity: 0.5;
-}
-  
-/* Credit to https://epicbootstrap.com/snippets/footer-basic */
-
-@keyframes linemation {
-    0% {width: 0%;}
-    100% {width: 65%;}
 }
 
